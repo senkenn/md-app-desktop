@@ -18,7 +18,10 @@ module.exports = {
     'tsconfigRootDir': __dirname,
     'project': ['./tsconfig.json']
   },
-  "ignorePatterns": ["*.js"],
+  "ignorePatterns": [
+    "*.js",
+    "src/pages/_app.tsx"
+  ],
   'rules': {
     'prettier/prettier': 'off',
 
