@@ -4,11 +4,10 @@
  * App entrypoint
  * @returns {JSX.Element}
  */
-export function App(): JSX.Element {
+export default function App(): JSX.Element {
   return (
-    <div className="text-bg-500">
-      Welcome to <a href="https://nextjs.org">Next.js!</a>
-    </div>);
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+  );
 }
-
-export default App;
