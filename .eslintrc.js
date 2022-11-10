@@ -8,9 +8,14 @@ module.exports = {
   'extends': [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking'
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    "plugin:tailwindcss/recommended"
   ],
-  'plugins': ['@typescript-eslint', 'node'],
+  'plugins': [
+    '@typescript-eslint',
+    'node',
+    "tailwindcss"
+  ],
   'parser': '@typescript-eslint/parser',
   'parserOptions': {
     'sourceType': 'module',
@@ -24,6 +29,15 @@ module.exports = {
   ],
   'rules': {
     'prettier/prettier': 'off',
+
+    // tailwind
+    "tailwindcss/classnames-order": "warn",
+    "tailwindcss/enforces-negative-arbitrary-values": "warn",
+    "tailwindcss/enforces-shorthand": "warn",
+    "tailwindcss/migration-from-tailwind-2": "warn",
+    "tailwindcss/no-arbitrary-value": "off",
+    "tailwindcss/no-custom-classname": "warn",
+    "tailwindcss/no-contradicting-classname": "error",
 
     /**
      * 1行あたりの文字数を制限
