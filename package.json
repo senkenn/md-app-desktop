@@ -1,7 +1,7 @@
 {
   "name": "md-app",
   "private": true,
-  "version": "0.0.0t",
+  "version": "0.0.0",
   "main": "index.js",
   "repository": "https://github.com/senkenn/md-app.git",
   "author": "senkenn <nayu3898@gmail.com>",
@@ -20,7 +20,8 @@
     "@tauri-apps/api": "^1.1.0",
     "next": "^12.2.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",

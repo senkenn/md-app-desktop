@@ -44,4 +44,7 @@
     "tauri",
     "typeahead"
   ],
+  "editor.quickSuggestions": {
+    "strings": true
+  }
 }
