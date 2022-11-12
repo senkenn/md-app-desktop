@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import { ChangeEventHandler, useState } from 'react';
+import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 /**
@@ -10,12 +10,6 @@ import ReactMarkdown from 'react-markdown';
 export default function App(): JSX.Element {
   const [markdown, setMarkdown] = useState('');
 
-  const setData: ChangeEventHandler<HTMLTextAreaElement> = (event): void => {
-    event.preventDefault();
-
-    setMarkdown(event.target.value);
-  };
-
   return (
     <div className="h-screen flex">
 
@@ -24,7 +18,7 @@ export default function App(): JSX.Element {
           placeholder="Markdownで記述"
           className="resize-none w-full h-5/6 border rounded-xl focus:outline-none"
           value={markdown}
-          onChange={setData}
+          onChange={(event) => setMarkdown(event.target.value)}
         />
       </div>
 
