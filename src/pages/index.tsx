@@ -17,7 +17,6 @@ export default function App(): JSX.Element {
 
       <div className="w-1/2 flex items-center">
         <Editor
-          markdown={markdown}
           setMarkdown={setMarkdown}
         />
       </div>
