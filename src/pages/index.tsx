@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
+import { Editor } from '../components/Editor';
+
 /**
  * App entrypoint
  * @returns {JSX.Element}
@@ -14,11 +16,9 @@ export default function App(): JSX.Element {
     <div className="h-screen flex">
 
       <div className="w-1/2 flex items-center">
-        <textarea
-          placeholder="Markdownで記述"
-          className="resize-none w-full h-5/6 border rounded-xl focus:outline-none"
-          value={markdown}
-          onChange={(event) => setMarkdown(event.target.value)}
+        <Editor
+          markdown={markdown}
+          setMarkdown={setMarkdown}
         />
       </div>
 
