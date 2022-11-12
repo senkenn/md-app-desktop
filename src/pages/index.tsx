@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import { useState } from 'react';
+import { ChangeEventHandler, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 /**
@@ -10,26 +10,26 @@ import ReactMarkdown from 'react-markdown';
 export default function App(): JSX.Element {
   const [markdown, setMarkdown] = useState('');
 
-  const setData = (e: any): void => {
-    e.preventDefault();
+  const setData: ChangeEventHandler<HTMLTextAreaElement> = (event): void => {
+    event.preventDefault();
 
-    setMarkdown(e.target.value);
+    setMarkdown(event.target.value);
   };
 
   return (
     <div className="h-screen flex">
 
-      <div className="w-1/2">
+      <div className="w-1/2 flex items-center">
         <textarea
           placeholder="Markdownで記述"
-          className="resize-none w-full h-full border rounded-xl focus:outline-none block"
+          className="resize-none w-full h-5/6 border rounded-xl focus:outline-none"
           value={markdown}
           onChange={setData}
-        ></textarea>
+        />
       </div>
 
-      <div className="w-1/2">
-        <div className="h-full w-full border rounded-xl bg-white">
+      <div className="w-1/2 flex items-center">
+        <div className="h-5/6 w-full border rounded-xl bg-white align-middle">
           <ReactMarkdown unwrapDisallowed={false}>
             {markdown}
           </ReactMarkdown>
