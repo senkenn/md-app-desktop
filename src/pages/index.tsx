@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
+import { marked } from 'marked';
 import { useState } from 'react';
-import ReactMarkdown from 'react-markdown';
 
 import { Editor } from '../components/Editor';
 
@@ -12,6 +12,7 @@ import { Editor } from '../components/Editor';
 export default function App(): JSX.Element {
   const [markdown, setMarkdown] = useState('');
 
+  console.log(marked(markdown));
   return (
     <div className="h-screen flex">
 
@@ -23,9 +24,7 @@ export default function App(): JSX.Element {
 
       <div className="w-1/2 flex items-center">
         <div className="h-5/6 w-full border rounded-xl bg-white align-middle">
-          <ReactMarkdown unwrapDisallowed={false}>
-            {markdown}
-          </ReactMarkdown>
+          <span dangerouslySetInnerHTML={{ __html: marked(markdown) }}/>
         </div>
       </div>
 
