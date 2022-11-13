@@ -4,6 +4,7 @@ import { marked } from 'marked';
 import { useState } from 'react';
 
 import { Editor } from '../components/Editor';
+import { renderer } from '../renderer/renderer';
 
 /**
  * App entrypoint
@@ -12,6 +13,7 @@ import { Editor } from '../components/Editor';
 export default function App(): JSX.Element {
   const [markdown, setMarkdown] = useState('');
 
+  marked.use({ renderer });
   console.log(marked(markdown));
   return (
     <div className="h-screen flex">
