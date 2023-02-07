@@ -1,0 +1,30 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.234.0/containers/ubuntu
+{
+  "name": "${localWorkspaceFolderBasename}",
+  "service": "app",
+  "dockerComposeFile": "../docker-compose.yml",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+        "GitHub.vscode-pull-request-github",
+        "ms-azuretools.vscode-docker",
+        "dbaeumer.vscode-eslint",
+        "mike-co.import-sorter",
+      ],    
+    }
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "uname -a",
+
+  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "root",
+}
