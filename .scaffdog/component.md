@@ -12,17 +12,13 @@ questions:
 ```typescript
 import React from 'react';
 
-/**
- * {{ Component }}
- * 
- * @returns {JSX.Element} Component
- */ 
-export const {{ Component }} = (): JSX.Element => {
+export type {{ Component }}Props = {
+}
 
+export function {{ Component }}(): JSX.Element {
   return (
-    <div className={''}>
-
-    </div>
+    <>
+    </>
   );
 };
 
